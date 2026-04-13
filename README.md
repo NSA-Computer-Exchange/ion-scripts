@@ -311,7 +311,3 @@ For issues or questions:
 - Ensure your Python environment is properly configured
 
 ---
-
-## License
-
-[Add your license information here]
