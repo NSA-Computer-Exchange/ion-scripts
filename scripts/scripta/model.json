@@ -1,0 +1,21 @@
+{
+  "name": "scripta",
+  "description": "This is Script A Generated Elsewhere",
+  "documentation": "Use Script A to do awesome things ",
+  "scriptCode": "",
+  "inputVariables": [
+    {
+      "name": "data_in",
+      "type": "STRING",
+      "description": "XML Data Input"
+    }
+  ],
+  "outputVariables": [
+    {
+      "name": "data_out",
+      "type": "STRING",
+      "description": "JSON data out"
+    }
+  ],
+  "usedLibraries": []
+}

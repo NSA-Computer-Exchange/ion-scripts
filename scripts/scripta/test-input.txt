@@ -1,0 +1,17 @@
+<root>
+  <row>
+    <name>Alice</name>
+    <age>30</age>
+    <city>Seattle</city>
+  </row>
+  <row>
+    <name>Bob</name>
+    <age>42</age>
+    <city>Denver</city>
+  </row>
+  <row>
+    <name>Carol</name>
+    <age>25</age>
+    <city>Portland</city>
+  </row>
+</root>

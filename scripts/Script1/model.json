@@ -1,0 +1,21 @@
+{
+  "name": "Script1",
+  "description": "This is scrpt 1 mofo!",
+  "documentation": "Thesae are the DOCS MOFO Fluffer",
+  "scriptCode": "",
+  "inputVariables": [
+    {
+      "name": "data_in",
+      "type": "STRING",
+      "description": "Variable description"
+    }
+  ],
+  "outputVariables": [
+    {
+      "name": "data_out",
+      "type": "STRING",
+      "description": "Variable description"
+    }
+  ],
+  "usedLibraries": []
+}

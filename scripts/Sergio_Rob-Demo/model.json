@@ -1,0 +1,21 @@
+{
+  "name": "Sergio_Rob-Demo",
+  "description": "",
+  "documentation": "",
+  "scriptCode": "",
+  "inputVariables": [
+    {
+      "name": "data_in",
+      "type": "STRING",
+      "description": "Variable description"
+    }
+  ],
+  "outputVariables": [
+    {
+      "name": "data_ou",
+      "type": "STRING",
+      "description": "Variable description"
+    }
+  ],
+  "usedLibraries": []
+}

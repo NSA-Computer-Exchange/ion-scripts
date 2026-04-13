@@ -1,0 +1,50 @@
+name: ION Scripts CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  deploy-and-test:
+    runs-on: ubuntu-latest
+
+    env:
+      ION_AUTH_URL: ${{ secrets.ION_AUTH_URL }}
+      ION_TENANT_URL: ${{ secrets.ION_TENANT_URL }}
+      ION_CLIENT_ID: ${{ secrets.ION_CLIENT_ID }}
+      ION_CLIENT_SECRET: ${{ secrets.ION_CLIENT_SECRET }}
+      ION_USERNAME: ${{ secrets.ION_USERNAME }}
+      ION_PASSWORD: ${{ secrets.ION_PASSWORD }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install requests python-dotenv
+
+      - name: Authenticate to ION
+        run: |
+          echo "ION_TOKEN=$(python tools/auth.py)" >> $GITHUB_ENV
+
+      - name: Deploy Payload_Cleanup_Thingy
+        run: python tools/deploy.py Payload_Cleanup_Thingy
+
+      - name: Approve Payload_Cleanup_Thingy
+        run: python tools/approve.py Payload_Cleanup_Thingy
+
+      - name: Run Payload_Cleanup_Thingy
+        run: python tools/run.py Payload_Cleanup_Thingy
+
+      - name: Upload script output
+        uses: actions/upload-artifact@v4
+        with:
+          name: ion-script-output
+          path: tests/test-output.xml
+  

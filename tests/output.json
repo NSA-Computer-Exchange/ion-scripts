@@ -1,0 +1,26 @@
+{
+  "queries": {
+    "query": [
+      {
+        "entities": "Attachments",
+        "useTextSearch": false,
+        "arguments": {
+          "argument": [
+            {
+              "key": "Order_Number",
+              "operator": "=",
+              "value": "6167",
+              "logicalType": ""
+            },
+            {
+              "key": "Order_Suffix",
+              "operator": "=",
+              "value": 0,
+              "logicalType": "AND"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

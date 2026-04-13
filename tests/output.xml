@@ -1,0 +1,17 @@
+<products>
+    <PRODS_YO>
+        <id>1</id>
+        <name>Widget</name>
+        <price>19.99</price>
+    </PRODS_YO>
+    <PRODS_YO>
+        <id>2</id>
+        <name>Gadget</name>
+        <price>29.99</price>
+    </PRODS_YO>
+    <PRODS_YO>
+        <id>3</id>
+        <name>Thing</name>
+        <price>9.99</price>
+    </PRODS_YO>
+</products>
