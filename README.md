@@ -247,12 +247,12 @@ ion-scripts/
 
 ## Design Principles
 
-- ✅ **No UI Dependency** - Fully API-driven, no need for Infor UI
-- ✅ **One Repository, Many Scripts** - Organize multiple scripts in one place
-- ✅ **One Folder = One Script** - Clear, intuitive structure
-- ✅ **Idempotent Deployments** - Deploy safely; scripts are created or updated as needed
-- ✅ **No Secrets in Source Control** - Credentials stored separately
-- ✅ **Consistent Tooling** - Same workflow locally and in CI/CD
+- **No UI Dependency** - Fully API-driven, no need for Infor UI
+- **One Repository, Many Scripts** - Organize multiple scripts in one place
+- **One Folder = One Script** - Clear, intuitive structure
+- **Idempotent Deployments** - Deploy safely; scripts are created or updated as needed
+- **No Secrets in Source Control** - Credentials stored separately
+- **Consistent Tooling** - Same workflow locally and in CI/CD
 
 ---
 
