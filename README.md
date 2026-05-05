@@ -5,7 +5,7 @@
 
 OR
 
-git clone [https://github.com/yourname/ion-flow-tools](https://github.com/NSA-Computer-Exchange/ion-scripts)
+git clone https://github.com/NSA-Computer-Exchange/ion-scripts
 
 ---
 
