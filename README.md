@@ -44,7 +44,7 @@ ION Scripts is a CLI-driven solution that implements a **fully automated, API-dr
 
 ### Prerequisites
 
-- **Python 3.8+** (3.14+ recommended)
+- **Python 3.9+** (3.12+ recommended)
 - **macOS/Linux** (tested on macOS, requires Homebrew Python on macOS due to LibreSSL issues)
 - **pip** and **virtual environment** support
 
