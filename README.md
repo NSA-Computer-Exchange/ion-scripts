@@ -12,7 +12,7 @@ ION Scripts is a CLI-driven solution that implements a **fully automated, API-dr
 
 ## Features
 
-### 🚀 Core Capabilities
+### Core Capabilities
 
 - **Interactive CLI Menu** - User-friendly interface for all script operations
 - **Script Management** - Create, deploy, update, approve, and run scripts via API
@@ -22,7 +22,7 @@ ION Scripts is a CLI-driven solution that implements a **fully automated, API-dr
 - **Template Generation** - Quickly bootstrap new scripts with standard structure
 - **No UI Dependency** - Full automation without accessing the Infor interface
 
-### 💻 Developer Experience
+### Developer Experience
 
 - Local development with VS Code
 - Git version control for all scripts
@@ -30,7 +30,7 @@ ION Scripts is a CLI-driven solution that implements a **fully automated, API-dr
 - Consistent tooling between local and CI environments
 - Automatic script validation
 
-### 🔒 Security & Best Practices
+### Security & Best Practices
 
 - OAuth 2.0 authentication
 - No secrets committed to source control
@@ -103,7 +103,7 @@ ION_USERNAME=your_username
 ION_PASSWORD=your_password
 ```
 
-**⚠️ Important:** Never commit `.env` or `.ionapi` files to version control. Add them to `.gitignore`.
+** Important:** Never commit `.env` or `.ionapi` files to version control. Add them to `.gitignore`.
 
 #### Authentication Model
 
