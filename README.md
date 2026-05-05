@@ -1,3 +1,12 @@
+## Quick Start (TUG Attendees)
+
+1. Click "Code"
+2. Download ZIP (no Git required)
+
+OR
+
+git clone [https://github.com/yourname/ion-flow-tools](https://github.com/NSA-Computer-Exchange/ion-scripts)
+
 # ION Scripts
 
 A complete automation toolkit for developing, deploying, and managing **Infor ION Python scripts** without using the Infor UI. Designed for teams using VS Code, GitHub, and GitHub Actions.
