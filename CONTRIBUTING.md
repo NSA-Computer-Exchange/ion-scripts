@@ -81,7 +81,7 @@ Pull Request Guidelines
 
 Avoid adding external dependencies unless there is a strong reason.
 
-# Sensitive Data Warning
+## Sensitive Data Warning
 
 ## Do not commit:
 
@@ -97,7 +97,7 @@ Use sanitized sample data instead.
 
 ## Good First Issues
 
-### Issues labeled good first issue are intended to be smaller, approachable tasks for new contributors.
+- Issues labeled good first issue are intended to be smaller, approachable tasks for new contributors.
 
 - These are a good place to start if you want to help but are not sure where to begin.
 
