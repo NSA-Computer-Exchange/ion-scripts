@@ -19,7 +19,7 @@ A complete automation toolkit for developing, deploying, and managing **Infor IO
 
 ## Overview
 
-ION Scripts is a CLI-driven solution that implements a **fully automated, API-driven workflow** for Infor ION script development and deployment. Write scripts locally, version them in Git, deploy automatically to ION, approve via API, and execute in CI/CD pipelines.
+ION Scripts is a CLI-driven solution that implements a **fully automated, API-driven workflow** for Infor ION script development and deployment. Write scripts locally, deploy automatically to ION, approve via API, and execute in CI/CD pipelines.
 
 ---
 
@@ -38,8 +38,6 @@ ION Scripts is a CLI-driven solution that implements a **fully automated, API-dr
 ### Developer Experience
 
 - Local development with VS Code
-- Git version control for all scripts
-- GitHub Actions CI/CD integration
 - Consistent tooling between local and CI environments
 - Automatic script validation
 
@@ -64,7 +62,7 @@ ION Scripts is a CLI-driven solution that implements a **fully automated, API-dr
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ion-scripts.git
+git clone https://github.com/NSA-Computer-Exchange/ion-scripts.git
 cd ion-scripts
 ```
 
@@ -128,7 +126,7 @@ ION uses two distinct endpoints:
 
 ## Usage
 
-### Interactive Menu (Recommended for Beginners)
+### Interactive Menu (Recommended)
 
 Start the interactive menu:
 
@@ -240,6 +238,7 @@ ion-scripts/
 │   ├── approve.py         # Script approval
 │   ├── check.py           # Status checking
 │   ├── deploy.py          # Script deployment
+│   ├── get_dataflow.py    # Script deployment
 │   ├── menu.py            # Interactive menu
 │   ├── newscript.py       # Script generation
 │   ├── run.py             # Script execution
