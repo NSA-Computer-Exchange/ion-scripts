@@ -69,8 +69,9 @@ cd ion-scripts
 ### Step 2: Create a Virtual Environment
 
 ```bash
-python3 -m venv env
-source env/bin/activate  # On macOS/Linux
+python -m venv env
+source env/bin/activate      # macOS/Linux
+env\Scripts\activate         # Windows
 ```
 
 ### Step 3: Install Dependencies
