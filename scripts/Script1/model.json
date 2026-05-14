@@ -1,7 +1,7 @@
 {
   "name": "Script1",
-  "description": "This is scrpt 1 mofo!",
-  "documentation": "Thesae are the DOCS MOFO Fluffer",
+  "description": "This is Script1",
+  "documentation": "Thesae are the DOCS for Script1",
   "scriptCode": "",
   "inputVariables": [
     {
