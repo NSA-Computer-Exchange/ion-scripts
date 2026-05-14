@@ -7,15 +7,6 @@ from security.iontoken import get_token
 
 load_dotenv()
 
-# values from your .ionapi
-# ci = "..."
-# cs = "..."
-# pu = "https://mingle-sso.inforcloudsuite.com:443"
-# ot = "/YOUR_TOKEN_PATH"   # from ionapi
-# saak = "..."
-# sask = "..."
-# iu = "https://ionapi.inforcloudsuite.com"
-# ti = "YOUR_TENANT"
 flow_name = "Stitch"
 
 token = get_token()
