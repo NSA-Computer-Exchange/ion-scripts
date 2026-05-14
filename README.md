@@ -64,6 +64,7 @@ ION Scripts is a CLI-driven solution that implements a **fully automated, API-dr
 ```bash
 git clone https://github.com/NSA-Computer-Exchange/ion-scripts.git
 cd ion-scripts
+git remote remove origin
 ```
 
 ### Step 2: Create a Virtual Environment
