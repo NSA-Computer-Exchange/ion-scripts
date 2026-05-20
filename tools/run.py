@@ -17,6 +17,41 @@ script = sys.argv[1]
 base_path = Path(f"scripts/{script}")
 
 # ---------------------------------------------------
+# Load script metadata
+# ---------------------------------------------------
+model_path = base_path / "model.json"
+meta_path = base_path / "meta.json"
+
+if not model_path.exists():
+    raise RuntimeError(f"Missing model.json in {base_path}")
+
+with open(model_path, "r", encoding="utf-8") as f:
+    model = json.load(f)
+
+meta = {}
+if meta_path.exists():
+    with open(meta_path, "r", encoding="utf-8") as f:
+        meta = json.load(f)
+
+output_format = meta.get("output_format")
+
+
+def first_variable_name(model_key, fallback_name):
+    variables = model.get(model_key) or []
+    if not variables:
+        return fallback_name
+
+    name = variables[0].get("name")
+    if not name:
+        raise RuntimeError(f"First {model_key} entry in model.json is missing a name")
+
+    return name
+
+
+input_name = first_variable_name("inputVariables", "data_in")
+output_name = first_variable_name("outputVariables", "data_out")
+
+# ---------------------------------------------------
 # Load raw input (format-agnostic)
 # ---------------------------------------------------
 input_path = base_path / "test-input.txt"
@@ -28,20 +63,8 @@ with open(input_path, "r", encoding="utf-8") as f:
     test_input = f.read()
 
 payload = {
-    "data_in": test_input
+    input_name: test_input,
 }
-
-# ---------------------------------------------------
-# Load meta data (optional, for format hints)
-# ---------------------------------------------------
-meta_path = base_path / "meta.json"
-
-meta = {}
-if meta_path.exists():
-    with open(meta_path, "r", encoding="utf-8") as f:
-        meta = json.load(f)
-
-output_format = meta.get("output_format")
 
 # ---------------------------------------------------
 # Headers
@@ -76,10 +99,11 @@ data = r.json()
 # ---------------------------------------------------
 # Validate output
 # ---------------------------------------------------
-if "data_out" not in data:
-    raise RuntimeError(f"No data_out in response: {data}")
+output_key = output_name if output_name in data else "data_out" if "data_out" in data else None
+if output_key is None:
+    raise RuntimeError(f"No {output_name} or data_out in response: {data}")
 
-output = data["data_out"]
+output = data[output_key]
 
 if output is None or (isinstance(output, str) and not output.strip()):
     raise RuntimeError("Script returned empty output")
