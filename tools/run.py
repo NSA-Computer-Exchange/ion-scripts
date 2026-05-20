@@ -63,7 +63,7 @@ with open(input_path, "r", encoding="utf-8") as f:
     test_input = f.read()
 
 payload = {
-    input_name: test_input
+    input_name: test_input,
 }
 
 # ---------------------------------------------------
@@ -99,10 +99,11 @@ data = r.json()
 # ---------------------------------------------------
 # Validate output
 # ---------------------------------------------------
-if output_name not in data:
-    raise RuntimeError(f"No {output_name} in response: {data}")
+output_key = output_name if output_name in data else "data_out" if "data_out" in data else None
+if output_key is None:
+    raise RuntimeError(f"No {output_name} or data_out in response: {data}")
 
-output = data[output_name]
+output = data[output_key]
 
 if output is None or (isinstance(output, str) and not output.strip()):
     raise RuntimeError("Script returned empty output")
